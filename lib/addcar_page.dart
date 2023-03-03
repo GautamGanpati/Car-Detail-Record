@@ -66,7 +66,7 @@ class _AddCarState extends State<AddCar> {
       appBar: AppBar(
         elevation: 5,
         backgroundColor: Colors.deepPurple,
-        title: Text('Add Car Details'),
+        title: const Text('Add Car Details'),
         centerTitle: false,
       ),
       backgroundColor: Colors.white,

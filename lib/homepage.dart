@@ -12,26 +12,20 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 50, fontWeight: FontWeight.w600);
-  static const List<Widget> _widgetOptions = <Widget>[
-    AddCar(),
-    CarList()
-  ];
+  static const List<Widget> _widgetOptions = <Widget>[AddCar(), CarList()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
-       
       ),
       bottomNavigationBar: GNav(
           backgroundColor: Colors.deepPurple,
           iconSize: 35,
           gap: 10,
-          padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-          textStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+          padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+          textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
           tabs: const [
             GButton(
               icon: Icons.add,

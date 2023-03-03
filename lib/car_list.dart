@@ -18,18 +18,18 @@ class _CarListState extends State<CarList> {
       appBar: AppBar(
         elevation: 5,
         backgroundColor: Colors.deepPurple,
-        title: Text('Car Detail List'),
+        title: const Text('Car Detail List'),
         centerTitle: false,
       ),
       body: StreamBuilder<QuerySnapshot>(
         stream: FirebaseFirestore.instance.collection('car').snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (snapshot.hasError) {
-            return Text('Something went wrong');
+            return const Text('Something went wrong');
           }
 
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           }
 
           final rows = snapshot.data!.docs.map((QueryDocumentSnapshot doc) {
@@ -47,9 +47,9 @@ class _CarListState extends State<CarList> {
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                        title: Text('Edit/Delete Row'),
-                        content:
-                            Text('What would you like to do with this row?'),
+                        title: const Text('Edit/Delete Row'),
+                        content: const Text(
+                            'What would you like to do with this row?'),
                         actions: <Widget>[
                           TextButton(
                             onPressed: () {
@@ -59,10 +59,10 @@ class _CarListState extends State<CarList> {
                                   .delete();
                               Navigator.of(context).pop();
                             },
-                            child: Text('Delete'),
+                            child: const Text('Delete'),
                           ),
                           TextButton(
-                              child: Text('Edit'),
+                              child: const Text('Edit'),
                               onPressed: () {
                                 Navigator.of(context).pop();
                                 showDialog(
@@ -89,38 +89,43 @@ class _CarListState extends State<CarList> {
                                           TextEditingController(
                                               text: data['cost'].toString());
                                       return AlertDialog(
-                                        title: Text('Edid Row'),
+                                        title: const Text('Edid Row'),
                                         content: SingleChildScrollView(
                                           child: Column(
                                             mainAxisSize: MainAxisSize.min,
                                             children: <Widget>[
                                               TextField(
                                                 controller: carNameController,
-                                                decoration: InputDecoration(
+                                                decoration:
+                                                    const InputDecoration(
                                                   labelText: 'Car Name',
                                                 ),
                                               ),
                                               TextField(
                                                 controller: colorController,
-                                                decoration: InputDecoration(
+                                                decoration:
+                                                    const InputDecoration(
                                                   labelText: 'Color',
                                                 ),
                                               ),
                                               TextField(
                                                 controller: carTypeController,
-                                                decoration: InputDecoration(
+                                                decoration:
+                                                    const InputDecoration(
                                                   labelText: 'Type',
                                                 ),
                                               ),
                                               TextField(
                                                 controller: modelController,
-                                                decoration: InputDecoration(
+                                                decoration:
+                                                    const InputDecoration(
                                                   labelText: 'Model',
                                                 ),
                                               ),
                                               TextField(
                                                 controller: costController,
-                                                decoration: InputDecoration(
+                                                decoration:
+                                                    const InputDecoration(
                                                   labelText: 'Cost',
                                                 ),
                                               ),
@@ -129,13 +134,13 @@ class _CarListState extends State<CarList> {
                                         ),
                                         actions: <Widget>[
                                           TextButton(
-                                            child: Text('Cancel'),
+                                            child: const Text('Cancel'),
                                             onPressed: () {
                                               Navigator.of(context).pop();
                                             },
                                           ),
                                           TextButton(
-                                            child: Text('Update'),
+                                            child: const Text('Update'),
                                             onPressed: () {
                                               FirebaseFirestore.instance
                                                   .collection('car')
@@ -155,7 +160,7 @@ class _CarListState extends State<CarList> {
                                                   .then((value) =>
                                                       Navigator.of(context)
                                                           .pop())
-                                                  .catchError((error) => print(
+                                                  .catchError((error) => Text(
                                                       'Failed to update row: $error'));
                                             },
                                           )
