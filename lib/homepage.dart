@@ -16,10 +16,7 @@ class _HomePageState extends State<HomePage> {
       TextStyle(fontSize: 50, fontWeight: FontWeight.w600);
   static const List<Widget> _widgetOptions = <Widget>[
     AddCar(),
-    Text(
-      'Car list',
-      style: optionStyle,
-    ),
+    CarList()
   ];
 
   @override

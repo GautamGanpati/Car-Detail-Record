@@ -17,8 +17,7 @@ class ScrollableWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      physics: BouncingScrollPhysics(),
+    return SingleChildScrollView( 
       scrollDirection: Axis.horizontal,
       child: SingleChildScrollView(
         physics: BouncingScrollPhysics(),

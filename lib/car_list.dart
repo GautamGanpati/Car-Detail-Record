@@ -1,8 +1,7 @@
 import 'package:cardetail_project/cardatamodel.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-
-import 'car.dart';
+import 'widgets/list_widget.dart';
 
 class CarList extends StatefulWidget {
   const CarList({super.key});
@@ -16,9 +15,27 @@ class _CarListState extends State<CarList> {
   @override
   Widget build(BuildContext context) {
     final columns = ['Car Name', 'Color', 'Type', 'Model', 'Cost'];
+    final rows = [];
 
-    return ScrollableWidget(
-      child: DataTable(columns: getColumns(columns), rows: getRows(cars),));
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 5,
+        backgroundColor: Colors.deepPurple,
+        title: Text('Car Detail List'),
+        centerTitle: false,
+      ),
+      body: ScrollableWidget(
+        child: DataTable(columns: getColumns(columns), rows: <DataRow>[
+          DataRow(cells: <DataCell>[
+            DataCell(Text('Aston')),
+            DataCell(Text('Black')),
+            DataCell(Text('AC')),
+            DataCell(Text('S15')),
+            DataCell(Text('2000000')),
+          ]),
+        ],
+        )),
+    );
   }
 
   List<DataColumn> getColumns(List<String> columns) {
@@ -29,17 +46,18 @@ class _CarListState extends State<CarList> {
   }).toList();
   }
 
-  List<CarDataModel> getRows(List<DataRow> rows) => cars.map((Car car) {
-    final cells = [car.name, car.type, car.color, car.model, car.cost];
+  // List<DataRow> getRows(List<DataRow> rows) => cars.map((Car car) {
+  //   final cells = [car.Name, car.Color, car.Model, car.Type, car.Cost];
 
-    return DataRow(
-      cells: Utils.modelBuilder(cells, (index, cell) {
-        return DataCell(Text('$cell'),
-        );
-      }),
-    );
-  }
-  );
+  //   return DataRow(
+  //     cells: Utils.modelBuilder(cells, (index, cell) {
+  //       return DataCell(Text('$rows'),
+  //       showEditIcon: true,
+  //       );
+  //     }),
+  //   );
+  // }
+  // );
 
 }
 
