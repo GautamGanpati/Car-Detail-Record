@@ -21,29 +21,30 @@ class _HomePageState extends State<HomePage> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: GNav(
-          backgroundColor: Colors.deepPurple,
-          iconSize: 35,
-          gap: 10,
-          padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-          textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-          tabs: const [
-            GButton(
-              icon: Icons.add,
-              iconColor: Colors.white,
-              text: 'Add Car',
-            ),
-            GButton(
-              icon: Icons.list_sharp,
-              iconColor: Colors.white,
-              text: 'Car List',
-            ),
-          ],
-          selectedIndex: _selectedIndex,
-          onTabChange: (index) {
-            setState(() {
-              _selectedIndex = index;
-            });
-          }),
+        backgroundColor: Colors.deepPurple,
+        iconSize: 35,
+        gap: 10,
+        padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+        textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+        tabs: const [
+          GButton(
+            icon: Icons.add,
+            iconColor: Colors.white,
+            text: 'Add Car',
+          ),
+          GButton(
+            icon: Icons.list_sharp,
+            iconColor: Colors.white,
+            text: 'Car List',
+          ),
+        ],
+        selectedIndex: _selectedIndex,
+        onTabChange: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
+      ),
     );
   }
 }
