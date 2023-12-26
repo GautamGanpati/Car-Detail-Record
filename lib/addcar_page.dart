@@ -76,165 +76,166 @@ class _AddCarState extends State<AddCar> {
       ),
       backgroundColor: Colors.white,
       body: SafeArea(
-          child: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    border: Border.all(
-                      color: Colors.white,
-                    ),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
-                    child: TextField(
-                      controller: _carnameController,
-                      decoration: const InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Car Name',
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    border: Border.all(
-                      color: Colors.white,
-                    ),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
-                    child: TextField(
-                      controller: _colorController,
-                      decoration: const InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Car Color',
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    border: Border.all(
-                      color: Colors.white,
-                    ),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
-                    child: TextField(
-                      controller: _cartypeController,
-                      decoration: const InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Car Type',
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    border: Border.all(
-                      color: Colors.white,
-                    ),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
-                    child: TextField(
-                      controller: _modelController,
-                      decoration: const InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Car Model',
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    border: Border.all(
-                      color: Colors.white,
-                    ),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
-                    child: TextField(
-                      controller: _costController,
-                      decoration: const InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Car Cost',
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: GestureDetector(
-                  onTap: addcar,
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: Container(
-                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                        color: Colors.deepPurple[400],
-                        borderRadius: BorderRadius.circular(12)),
-                    child: const Center(
-                      child: Text(
-                        'ADD',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
+                      color: Colors.grey[300],
+                      border: Border.all(
+                        color: Colors.white,
+                      ),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
+                      child: TextField(
+                        controller: _carnameController,
+                        decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          hintText: 'Car Name',
                         ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-            ],
+                const SizedBox(
+                  height: 15,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      border: Border.all(
+                        color: Colors.white,
+                      ),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
+                      child: TextField(
+                        controller: _colorController,
+                        decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          hintText: 'Car Color',
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      border: Border.all(
+                        color: Colors.white,
+                      ),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
+                      child: TextField(
+                        controller: _cartypeController,
+                        decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          hintText: 'Car Type',
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      border: Border.all(
+                        color: Colors.white,
+                      ),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
+                      child: TextField(
+                        controller: _modelController,
+                        decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          hintText: 'Car Model',
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      border: Border.all(
+                        color: Colors.white,
+                      ),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
+                      child: TextField(
+                        controller: _costController,
+                        decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          hintText: 'Car Cost',
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: GestureDetector(
+                    onTap: addcar,
+                    child: Container(
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                          color: Colors.deepPurple[400],
+                          borderRadius: BorderRadius.circular(12)),
+                      child: const Center(
+                        child: Text(
+                          'ADD',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+              ],
+            ),
           ),
         ),
-      )),
+      ),
     );
   }
 }
