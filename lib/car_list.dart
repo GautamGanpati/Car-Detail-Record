@@ -10,7 +10,7 @@ class CarList extends StatefulWidget {
 }
 
 class _CarListState extends State<CarList> {
-  final columns = ['Car Name', 'Color', 'Type', 'Model', 'Cost'];
+  final columns = ['Name', 'Color', 'Type', 'Model', 'Cost'];
 
   @override
   Widget build(BuildContext context) {
@@ -186,7 +186,10 @@ class _CarListState extends State<CarList> {
   List<DataColumn> getColumns(List<String> columns) {
     return columns.map((String column) {
       return DataColumn(
-        label: Text(column),
+        label: Text(
+          column,
+          style: TextStyle(fontSize: 16, color: Colors.deepPurple),
+        ),
       );
     }).toList();
   }

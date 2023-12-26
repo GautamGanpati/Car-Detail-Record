@@ -34,6 +34,11 @@ class _AddCarState extends State<AddCar> {
         _modelController.text.trim(),
         int.parse(_costController.text.trim()),
       );
+      _carnameController.clear();
+      _colorController.clear();
+      _cartypeController.clear();
+      _modelController.clear();
+      _costController.clear();
     }
   }
 
